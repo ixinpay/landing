@@ -13,8 +13,8 @@
 
     // Activate the user
     async function activateUser() {
-              const userKey = getQueryString('user'); // returns '<userKey>'
-              if (!userKey)
+              const userId = getQueryString('userId'); // returns '<userKey>'
+              if (!userId)
                   return;
 
               const path = 'https://ixinhub.com:8061';
@@ -24,7 +24,7 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        userKey,
+                        userId,
                     }),
                     credentials: 'include',
               })
